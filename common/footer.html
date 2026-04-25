@@ -1,0 +1,29 @@
+<script type="text/discourse-plugin" version="0.1">
+  const footer = document.querySelector('.cyberfind-footer');
+  if (!settings.show_brand_footer && footer) {
+    footer.remove();
+  }
+</script>
+
+<div class="cyberfind-footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3036 1051.29" width="100" height="35" role="img" aria-label="CyberFind">
+        <style>.cf-mark{fill:currentColor}.cf-accent{fill:#59ba35}</style>
+        <g>
+          <path class="cf-mark" d="m371.22,255.36c-71.06,0-128.82,57.76-128.82,128.82s57.76,128.82,128.82,128.82,128.76-57.81,128.76-128.82-57.76-128.82-128.76-128.82Zm84.41,96.39l-106.3,106.3v.05l-55.11-55.11c-4.45-4.45-4.45-11.66,0-16.11l5.46-5.4.37-.37c.42-.37.9-.74,1.43-1.11,3.76-2.54,8.74-2.54,12.51,0,.64.42,1.22.95,1.8,1.48l33.54,33.49,84.73-84.78c4.45-4.45,11.66-4.45,16.11,0l5.46,5.46c4.45,4.45,4.45,11.66,0,16.11Z"/>
+          <path class="cf-accent" d="m371.22,224.9c-87.86,0-159.29,71.43-159.29,159.29s71.43,159.29,159.29,159.29,159.23-71.48,159.23-159.29-71.43-159.29-159.23-159.29Zm0,288.1c-71.06,0-128.82-57.81-128.82-128.82s57.76-128.82,128.82-128.82,128.76,57.76,128.76,128.82-57.76,128.82-128.76,128.82Z"/>
+        </g>
+      </svg>
+      <p class="footer-tagline">Pure Cybersecurity Intelligence</p>
+    </div>
+    <div class="footer-col footer-links">
+      <a href="https://cyberfind.io/privacy">Privacy</a>
+      <a href="https://cyberfind.io/terms">Terms</a>
+      <a href="https://cyberfind.io/contact">Contact</a>
+    </div>
+    <div class="footer-col footer-copyright">
+      <p>&copy; 2026 CyberFind. All rights reserved.</p>
+    </div>
+  </div>
+</div>

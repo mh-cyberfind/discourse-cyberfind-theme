@@ -1,0 +1,29 @@
+show_welcome_banner:
+  default: true
+  type: bool
+  description: "Show the welcome banner on the homepage"
+
+welcome_banner_text:
+  default: "Welcome to the CyberFind Community — pure cybersecurity discussions."
+  type: string
+  description: "Text displayed in the welcome banner"
+
+show_brand_bar:
+  default: true
+  type: bool
+  description: "Show the CyberFind brand navigation bar above the Discourse header"
+
+show_brand_footer:
+  default: true
+  type: bool
+  description: "Show the CyberFind brand footer"
+
+home_url:
+  default: "https://cyberfind.io"
+  type: string
+  description: "URL for the 'Home' link in the brand bar"
+
+intelhub_url:
+  default: "https://cyberfind.io/intel"
+  type: string
+  description: "URL for the 'IntelHub' link in the brand bar"

@@ -1,0 +1,42 @@
+// ==========================================================================
+// CyberFind Community Theme — Mobile Overrides
+// ==========================================================================
+
+// Brand bar: logo only on mobile
+.cyberfind-brand-bar .brand-nav {
+  display: none;
+}
+
+.cyberfind-brand-bar .brand-logo svg {
+  height: 24px;
+}
+
+// Touch-friendly tap targets
+.btn,
+.nav-pills > li > a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+// Reduced shadows on mobile
+#user-card,
+.user-card,
+.d-modal .modal-inner-container {
+  box-shadow: var(--shadow-sm);
+}
+
+// Footer: stacked on mobile
+.cyberfind-footer .footer-inner {
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.cyberfind-footer .footer-links {
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cyberfind-footer .footer-copyright {
+  text-align: center;
+}

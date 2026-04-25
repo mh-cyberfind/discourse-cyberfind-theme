@@ -1,0 +1,335 @@
+// ==========================================================================
+// CyberFind Community Theme — Core SCSS Overrides
+// Applies playbook tokens to Discourse components
+// ==========================================================================
+
+// --- Custom Properties (not native to Discourse) ---
+
+:root {
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+// --- Border Radius ---
+
+.topic-list-item,
+.topic-body {
+  border-radius: var(--radius-md);
+}
+
+.btn-primary,
+.btn-default,
+.btn {
+  border-radius: var(--radius-sm);
+}
+
+.badge-wrapper,
+.discourse-tag {
+  border-radius: var(--radius-sm);
+}
+
+.search-container .search-result {
+  border-radius: var(--radius-sm);
+}
+
+.nav-pills > li > a {
+  border-radius: var(--radius-sm);
+}
+
+// --- Shadows ---
+
+#user-card,
+.user-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--primary-low);
+  box-shadow: var(--shadow-md);
+}
+
+.d-modal .modal-inner-container {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.menu-panel,
+.d-header .panel-body {
+  box-shadow: var(--shadow-lg);
+}
+
+// --- Topic List ---
+
+.topic-list-item:hover {
+  background-color: var(--primary-very-low);
+}
+
+.discourse-tag {
+  background-color: var(--tertiary-low);
+  color: var(--tertiary);
+}
+
+// --- Brand Bar ---
+
+.cyberfind-brand-bar {
+  background: var(--header_background);
+  border-bottom: 1px solid var(--primary-low);
+  padding: 0.5rem 1rem;
+
+  .brand-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    text-decoration: none;
+
+    svg {
+      height: 32px;
+      width: auto;
+    }
+  }
+
+  .brand-nav {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: var(--primary-medium);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+
+      &.active,
+      &:hover {
+        color: var(--tertiary);
+      }
+    }
+  }
+}
+
+// --- Welcome Banner ---
+
+.cyberfind-welcome-banner {
+  margin: 1rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+
+  .welcome-inner {
+    background: var(--tertiary);
+    color: var(--secondary);
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+  }
+}
+
+// --- Footer ---
+
+.cyberfind-footer {
+  border-top: 1px solid var(--primary-low);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  color: var(--primary-medium);
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .footer-col {
+    flex: 1;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    svg {
+      height: 28px;
+      width: auto;
+      color: var(--primary-medium);
+    }
+  }
+
+  .footer-tagline {
+    font-size: 0.8125rem;
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    a {
+      color: var(--primary-medium);
+      text-decoration: none;
+      font-size: 0.875rem;
+
+      &:hover {
+        color: var(--tertiary);
+      }
+    }
+  }
+
+  .footer-copyright {
+    text-align: right;
+    font-size: 0.8125rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// --- Cross-App Header ---
+// Always-dark bar matching IntelHub's cross-app header. Sits above
+// Discourse's native .d-header. Uses DESIGN.md crossAppHeader tokens.
+
+.cyberfind-cross-app-header {
+  background: #0a0a0a;
+  border-bottom: 1px solid #27272a;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  box-sizing: border-box;
+
+  .ca-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .ca-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    flex-shrink: 0;
+
+    .ca-logo {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .ca-wordmark {
+      font-family: "Geist Sans", system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #fafafa;
+      line-height: 1;
+    }
+  }
+
+  .ca-products {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ca-product-pill {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #a1a1aa;
+    padding: 4px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 100ms ease, color 100ms ease;
+    white-space: nowrap;
+
+    &:hover {
+      background: #18181b;
+      color: #fafafa;
+    }
+  }
+
+  .ca-product-active {
+    background: #1c1917;
+    color: #818CF8;
+    cursor: default;
+  }
+
+  .ca-user-zone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .ca-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #27272a;
+    object-fit: cover;
+  }
+
+  .ca-display-name {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 13px;
+    color: #a1a1aa;
+  }
+
+  .ca-signin {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #a1a1aa;
+    text-decoration: none;
+    padding: 4px 12px;
+    border: 1px solid #3f3f46;
+    border-radius: 6px;
+    transition: color 100ms ease, border-color 100ms ease;
+
+    &:hover {
+      color: #fafafa;
+      border-color: #71717a;
+    }
+  }
+}
+
+.d-header {
+  top: 48px !important;
+}
+
+@media (max-width: 767px) {
+  .cyberfind-cross-app-header {
+    .ca-wordmark,
+    .ca-display-name {
+      display: none;
+    }
+
+    .ca-products {
+      position: static;
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<script type="text/discourse-plugin" version="0.1">
+  api.onPageChange(() => {
+    const banner = document.querySelector('.cyberfind-welcome-banner');
+    if (!banner) return;
+
+    const isHomepage = document.body.classList.contains('navigation-topics');
+    const showBanner = settings.show_welcome_banner;
+
+    banner.style.display = (isHomepage && showBanner) ? 'block' : 'none';
+
+    const textEl = banner.querySelector('.welcome-text');
+    if (textEl) textEl.textContent = settings.welcome_banner_text;
+  });
+</script>
+
+<div class="cyberfind-welcome-banner" style="display: none;">
+  <div class="welcome-inner">
+    <span class="welcome-text">Welcome to the CyberFind Community — pure cybersecurity discussions.</span>
+  </div>
+</div>

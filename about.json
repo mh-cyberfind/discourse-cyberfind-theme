@@ -1,0 +1,32 @@
+{
+  "name": "CyberFind Community",
+  "about_url": "https://cyberfind.io",
+  "license_url": "https://github.com/mhmayet/discourse-cyberfind-theme/blob/main/LICENSE",
+  "component": false,
+  "color_schemes": {
+    "CyberFind Light": {
+      "primary": "1C1917",
+      "secondary": "FAFAF9",
+      "tertiary": "312E81",
+      "quaternary": "4338CA",
+      "header_background": "FFFFFF",
+      "header_primary": "1C1917",
+      "highlight": "3730A3",
+      "danger": "9F1239",
+      "success": "16A34A",
+      "love": "DC2626"
+    },
+    "CyberFind Dark": {
+      "primary": "E6EDF3",
+      "secondary": "0D1117",
+      "tertiary": "818CF8",
+      "quaternary": "6366F1",
+      "header_background": "161B22",
+      "header_primary": "E6EDF3",
+      "highlight": "A5B4FC",
+      "danger": "FB7185",
+      "success": "4ADE80",
+      "love": "F87171"
+    }
+  }
+}

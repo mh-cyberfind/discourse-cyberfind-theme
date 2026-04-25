@@ -1,0 +1,10 @@
+en:
+  theme_metadata:
+    description: "CyberFind Community theme — branded colours, typography, and identity for community.cyberfind.io"
+    settings:
+      show_welcome_banner: "Show welcome banner on homepage"
+      welcome_banner_text: "Welcome banner text content"
+      show_brand_bar: "Show CyberFind brand navigation bar"
+      show_brand_footer: "Show CyberFind brand footer"
+      home_url: "Home link URL in brand bar"
+      intelhub_url: "IntelHub link URL in brand bar"
