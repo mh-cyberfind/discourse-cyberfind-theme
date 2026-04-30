@@ -229,6 +229,12 @@
     gap: 8px;
     text-decoration: none;
     flex-shrink: 0;
+    border-radius: 6px;
+
+    &:focus-visible {
+      outline: 2px solid #A5B4FC;
+      outline-offset: 2px;
+    }
 
     .ca-logo {
       width: 20px;
@@ -268,6 +274,11 @@
     &:hover {
       background: #18181b;
       color: #fafafa;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #A5B4FC;
+      outline-offset: 2px;
     }
   }
 
@@ -312,6 +323,11 @@
     &:hover {
       color: #fafafa;
       border-color: #71717a;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #A5B4FC;
+      outline-offset: 2px;
     }
   }
 }

@@ -34,7 +34,7 @@ function buildUserZone(currentUser) {
 
 function buildBar(currentUser) {
   return `
-    <div class="cyberfind-cross-app-header" role="banner">
+    <div class="cyberfind-cross-app-header">
       <div class="ca-inner">
         <a href="${CYBERFIND_HOME}" class="ca-brand" aria-label="CyberFind home">
           ${LOGO_SVG}
