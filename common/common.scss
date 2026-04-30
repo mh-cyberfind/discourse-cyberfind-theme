@@ -134,10 +134,16 @@
 
 // --- Footer ---
 
+// Hybrid 2-column layout — brand mark + copyright left, legal links right.
+// Slim app-shell register; the cross-app header carries the wordmark, so the
+// footer wears just the icon mark to keep brand presence subtle.
+
 .cyberfind-footer {
   border-top: 1px solid var(--primary-low);
-  padding: 2rem 1rem;
+  padding: 1.25rem 1.5rem;
   margin-top: 2rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8125rem;
   color: var(--primary-medium);
 
   .footer-inner {
@@ -146,52 +152,56 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .footer-col {
-    flex: 1;
-  }
-
-  .footer-brand {
+  .footer-copy {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 0 0 auto;
+  }
+
+  .footer-mark {
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    color: var(--primary-medium);
+    flex-shrink: 0;
 
     svg {
-      height: 28px;
-      width: auto;
-      color: var(--primary-medium);
+      width: 100%;
+      height: 100%;
     }
-  }
-
-  .footer-tagline {
-    font-size: 0.8125rem;
-    margin: 0;
   }
 
   .footer-links {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
 
     a {
       color: var(--primary-medium);
       text-decoration: none;
-      font-size: 0.875rem;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: var(--tertiary);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--tertiary);
+        outline-offset: 2px;
+        border-radius: 2px;
       }
     }
   }
 
-  .footer-copyright {
-    text-align: right;
-    font-size: 0.8125rem;
-
-    p {
-      margin: 0;
+  @media (max-width: 600px) {
+    .footer-inner {
+      flex-direction: column;
+      gap: 0.625rem;
+      align-items: center;
+      text-align: center;
     }
   }
 }
