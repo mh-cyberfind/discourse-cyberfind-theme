@@ -1,6 +1,18 @@
 // ==========================================================================
 // CyberFind Community Theme — Core SCSS Overrides
 // Applies playbook tokens to Discourse components
+//
+// Colour comes from the two schemes in about.json, which carry the canonical
+// CyberFind palette (design-playbook brands/cyberfind/tokens.json, published as
+// @mh-cyberfind/design-artifacts v0.2.0). Everything below resolves through
+// Discourse's derived scheme variables — --primary, --secondary, --tertiary,
+// --primary-low and friends — so the schemes are the single place a colour is
+// decided. Do not hard-code a hex here; change about.json instead.
+//
+// The one exception is the cross-app header, which is deliberately always-dark
+// and shared with IntelHub and Admin. Its chrome hexes are the crossAppHeader
+// tokens from DESIGN.md and must stay byte-identical across the three products,
+// so they do not follow the scheme.
 // ==========================================================================
 
 // --- Custom Properties (not native to Discourse) ---
@@ -162,10 +174,12 @@
     flex: 0 0 auto;
   }
 
+  // 0.83:1 icon crop. Height carries the KAN-530 24px icon floor; below that
+  // the checkmark inside the magnifier stops resolving.
   .footer-mark {
     display: inline-flex;
     width: 22px;
-    height: 22px;
+    height: 26px;
     color: var(--primary-medium);
     flex-shrink: 0;
 
@@ -209,6 +223,14 @@
 // --- Cross-App Header ---
 // Always-dark bar matching IntelHub's cross-app header. Sits above
 // Discourse's native .d-header. Uses DESIGN.md crossAppHeader tokens.
+//
+// The chrome hexes (#0a0a0a, #27272a, #fafafa, #a1a1aa, #18181b, #1c1917,
+// #3f3f46, #71717a) are the shared crossAppHeader token set and must not be
+// changed here alone — they are the same bar in IntelHub and Admin.
+//
+// The indigo accents are not part of that set. They came from the retired
+// colour scheme and now carry the canonical dark-mode Cyber Indigo, #A5A2F5:
+// 8.57:1 as a focus ring on the bar, 7.57:1 as the active pill label.
 
 .cyberfind-cross-app-header {
   background: #0a0a0a;
@@ -242,7 +264,7 @@
     border-radius: 6px;
 
     &:focus-visible {
-      outline: 2px solid #A5B4FC;
+      outline: 2px solid #A5A2F5;
       outline-offset: 2px;
     }
 
@@ -287,14 +309,14 @@
     }
 
     &:focus-visible {
-      outline: 2px solid #A5B4FC;
+      outline: 2px solid #A5A2F5;
       outline-offset: 2px;
     }
   }
 
   .ca-product-active {
     background: #1c1917;
-    color: #818CF8;
+    color: #A5A2F5;
     cursor: default;
   }
 
@@ -336,7 +358,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid #A5B4FC;
+      outline: 2px solid #A5A2F5;
       outline-offset: 2px;
     }
   }
