@@ -5,28 +5,28 @@
   "component": false,
   "color_schemes": {
     "CyberFind Light": {
-      "primary": "1C1917",
-      "secondary": "FAFAF9",
+      "primary": "16161D",
+      "secondary": "FAFAFB",
       "tertiary": "312E81",
-      "quaternary": "4338CA",
+      "quaternary": "423EA4",
       "header_background": "FFFFFF",
-      "header_primary": "1C1917",
-      "highlight": "3730A3",
-      "danger": "9F1239",
-      "success": "16A34A",
-      "love": "DC2626"
+      "header_primary": "16161D",
+      "highlight": "DEDDEA",
+      "danger": "B31124",
+      "success": "35781E",
+      "love": "7E0C59"
     },
     "CyberFind Dark": {
-      "primary": "E6EDF3",
-      "secondary": "0D1117",
-      "tertiary": "818CF8",
-      "quaternary": "6366F1",
-      "header_background": "161B22",
-      "header_primary": "E6EDF3",
-      "highlight": "A5B4FC",
-      "danger": "FB7185",
-      "success": "4ADE80",
-      "love": "F87171"
+      "primary": "E7E8F0",
+      "secondary": "0C0D14",
+      "tertiary": "A5A2F5",
+      "quaternary": "C1C0FF",
+      "header_background": "14161F",
+      "header_primary": "E7E8F0",
+      "highlight": "28283C",
+      "danger": "F86A67",
+      "success": "7AD560",
+      "love": "E678C0"
     }
   }
 }
